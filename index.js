@@ -83,7 +83,7 @@ function createTaskElement(task) {
 
 	const deleteButton = document.createElement("button");
 
-	deleteButton.textContent = "Delete";
+	deleteButton.textContent = "🗑️Eliminar";
 	deleteButton.classList.add("delete-btn");
 	deleteButton.addEventListener("click", () => deleteTaskElement(task.id));
 
@@ -129,7 +129,7 @@ function enableEditMode(taskId, titleElement, descriptionElement, actionContaine
 
 	const saveButton = document.createElement("button");
 
-	saveButton.textContent = "Save";
+	saveButton.textContent = "💾Guardar";
 
 	saveButton.classList.add("save-btn");
 
@@ -181,7 +181,7 @@ function enableEditMode(taskId, titleElement, descriptionElement, actionContaine
 	// CANCEL BUTTON
 
 	const cancelButton = document.createElement("button");
-	cancelButton.textContent = "Cancel";
+	cancelButton.textContent = "❌​Cancelar";
 	cancelButton.classList.add("cancel-btn");
 	cancelButton.addEventListener("click", () => {
 		const originalH3 = document.createElement("h3");
@@ -205,7 +205,7 @@ function restoreButtons(taskId, titleElement, descriptionElement, actionContaine
 
 	const editButton = document.createElement("button");
 
-	editButton.textContent = "Edit";
+	editButton.textContent = "🖋️Editar";
 
 	editButton.classList.add("edit-btn");
 
@@ -223,7 +223,7 @@ function restoreButtons(taskId, titleElement, descriptionElement, actionContaine
 
 	const deleteButton = document.createElement("button");
 
-	deleteButton.textContent = "Delete";
+	deleteButton.textContent = "🗑️Eliminar";
 
 	deleteButton.classList.add("delete-btn");
 
