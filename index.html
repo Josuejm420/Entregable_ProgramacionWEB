@@ -1,54 +1,108 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
+	<!-- CONFIGURACION -->
+
 	<meta charset="UTF-8">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>Task Manager</title>
+
+	<!-- CSS -->
 
 	<link rel="stylesheet" href="./styles.css">
 
+	<!-- GOOGLE FONTS -->
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
+
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
 		rel="stylesheet">
+
 </head>
 
 <body>
 
+	<!-- CONTENEDOR PRINCIPAL -->
+
 	<div class="main-container">
 
-		<h1>Administrador De Tareas📒​</h1>
-		
+		<!-- TITULO -->
+
+		<h1>Administrador De Tareas📒</h1>
+
+		<!-- FORMULARIO -->
 
 		<form id="task-form" onsubmit="handleFormSubmit(event)">
+
+			<!-- TITULO -->
 
 			<input
 				required
 				type="text"
-				placeholder="Titulo de la tarea"
 				name="title"
-				id="title">
+				id="title"
+				placeholder="Titulo de la tarea">
+
+			<!-- DESCRIPCION -->
 
 			<textarea
-				placeholder="Añadir la description de la tarea"
 				name="description"
 				id="description"
-				rows="4"></textarea>
+				rows="4"
+				placeholder="Añadir la descripcion de la tarea"></textarea>
+
+			<!-- ESTADO -->
+
+			<select name="status" id="status" required>
+
+				<option value="Inicial">
+					🟡 Inicial
+				</option>
+
+				<option value="En proceso">
+					🔵 En proceso
+				</option>
+
+				<option value="Finalizada">
+					🟢 Finalizada
+				</option>
+
+			</select>
+
+			<!-- MENSAJE ERROR -->
 
 			<div id="error-message" class="error-message"></div>
 
-			<button type="submit">Añadir Tarea</button>
+			<!-- BOTON -->
+
+			<button type="submit">
+			Añadir Tarea
+			</button>
 
 		</form>
 
-		<ul id="task-list-container" class="task-list"></ul>
+		<!-- LISTA DE TAREAS -->
+
+		<ul
+			id="task-list-container"
+			class="task-list">
+		</ul>
 
 	</div>
+
+	<!-- JAVASCRIPT -->
 
 	<script src="./index.js"></script>
 
 </body>
 
 </html>
+
